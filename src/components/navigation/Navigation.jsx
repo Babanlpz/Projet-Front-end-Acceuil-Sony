@@ -1,8 +1,8 @@
 import { useState } from "react";
 import Logo from "../../assets/logo.png";
-import "./Nav.css";
+import "./Navigation.css";
 
-const Nav = () => {
+const Navigation = () => {
   const [isActive, setIsActive] = useState(false);
 
   const handleBurgerClick = () => {
@@ -14,7 +14,7 @@ const Nav = () => {
       <a href="#" className="logo">
         <img src={Logo} alt="" />
       </a>
-      <ul className="navigation">
+      <ul className={`navigation ${isActive ? "active" : ""}`}>
         <li>
           <a href="#" className="active">
             Home
@@ -34,7 +34,7 @@ const Nav = () => {
         <div className="icon-user">
           <ion-icon name="person"></ion-icon>
         </div>
-        <div id="burger-menu">
+        <div id="burger-menu" onClick={handleBurgerClick}>
           <ion-icon name="menu-outline"></ion-icon>
         </div>
       </div>
@@ -42,4 +42,4 @@ const Nav = () => {
   );
 };
 
-export default Nav;
+export default Navigation;

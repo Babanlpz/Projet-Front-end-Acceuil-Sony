@@ -1,10 +1,12 @@
 import "./App.css";
-import Nav from "./components/navigation/Nav";
+import Hero from "./components/hero/Hero";
+import Navigation from "./components/navigation/Navigation";
 
 function App() {
   return (
     <>
-      <Nav />
+      <Navigation />
+      <Hero />
     </>
   );
 }
